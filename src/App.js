@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Editor from './Components/Editor';
+import GoogleSearch from './Components/GoogleSearch/GoogleSearch';
+import Header from './Components/Header/Header';
+import HeroText from './Components/HeroText/HeroText';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return  <>
+      <HeroText />
+      <div className='gridMain'>
+      <GoogleSearch />
+      <Editor/>
+      </div>
+  </>
 }
 
 export default App;
