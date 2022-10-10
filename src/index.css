@@ -18,8 +18,7 @@ code {
 }
 
 .gridMain{
+  width : 200vw;
   display: flex;
-  flex-direction: row;
-  grid-area: 5rem;
   margin-top: 10rem;
 }

@@ -1,20 +1,27 @@
-import React, { useEffect } from 'react'
+import React, {useRef, useState } from 'react'
+import Results from '../Results/Results';
+import classes from './GoogleSearch.module.css'
+
 
 const GoogleSearch = () => {
-    useEffect(()=>{
-        // eslint-disable-next-line no-unused-expressions
-        (function() {
-            //var cx = '111:xxx';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=65533adef18cf46d4';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);}
-            )}
-    )
+  const[searchThis , setSearchThis] = useState('');
+      const FetchingHanlder = (event) =>{
+              setSearchThis(event.target.value)
+      }
+
+      const isEmpty = searchThis === '' ; 
+    let value ;
+    const passValueHandler = (event) =>{
+      value = searchThis ;
+}
+
   return (
-    <div className="gcse-searchbox"/>
+    <div className={classes.searchSection}>
+            
+            <div className={classes.results}>
+                    <Results value={value} click={false} />
+            </div>
+    </div>
   )
 }
 export default GoogleSearch
