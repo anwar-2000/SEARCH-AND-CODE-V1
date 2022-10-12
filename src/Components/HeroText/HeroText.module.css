@@ -1,8 +1,9 @@
 .wrapper{
     width: 100%;
-    height: 30rem;
+    height: 100%;
     position: relative;
     top: auto;
+    overflow-x: hidden;
     
 }
 
@@ -13,8 +14,9 @@
 }
 
 .container video {
-    width: 100%;
-    height: 70%;
+    -webkit-transform: scaleX(2); 
+    -moz-transform: scaleX(2);
+    
 }
 
 .text{
@@ -29,6 +31,6 @@
     height: 100%;
     width: 100%;
     mix-blend-mode: multiply;
-    font-size:20px;
+    font-size:60px;
     font-weight: 900;
 }
