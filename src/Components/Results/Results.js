@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useCallback, useState } from "react";
 import classes from "./Results.module.css";
-import GIF from "../../assets/loader-search-engine.gif";
+import GIF from "../../assets/loader.gif";
 //import  FAIL from '../../assets/fail.gif'
 
 const Results = () => {

@@ -24,6 +24,7 @@
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #000;
@@ -33,4 +34,21 @@
     mix-blend-mode: multiply;
     font-size:60px;
     font-weight: 900;
+}
+
+.movingTexts{
+    display: flex;
+}
+
+.gsap__animations__togif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 3rem;
+}
+.gsap__animations__togif img {
+    width: 15%;
+    border-radius: 40%;
+   
 }

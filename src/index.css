@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: #282C34;
   margin: 0;
@@ -16,10 +20,4 @@ code {
 
 .editor{
   background-color: white !important;
-}
-
-.gridMain{
-  width : 200vw;
-  display: flex;
-  margin-top: 10rem;
 }
