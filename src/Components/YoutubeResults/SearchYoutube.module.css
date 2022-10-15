@@ -1,0 +1,45 @@
+.search__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search__input  input{
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: .5;
+    color: white;
+}
+
+.search__input  input:active ,
+.search__input  input:focus{
+    border: white solid 0.5px;
+    outline: none;
+}
+
+.search__input button {
+        padding: 25px 60px;
+        margin: 0 0.5rem;
+        background-color: #D94952 ;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 400ms ease-in all;
+        color: white;
+         font-size: 1.5rem;
+}
+.search__input  input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    color: white;
+    
+}
+
+.search__input button:hover {
+    background-color:#d81c29;
+    
+} 
+.search__google {
+    background: none;
+    padding: 1.5rem 4rem;
+    border: white solid 0.5px;
+}

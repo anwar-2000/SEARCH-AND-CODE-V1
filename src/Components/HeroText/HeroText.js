@@ -1,10 +1,4 @@
-import SmokeVideo from '../../assets/smoke.mp4'
-import classes from './HeroText.module.css'
-import python  from '../../assets/python2.jpg'
-import nodejs  from '../../assets/nodejs.png'
-import php from '../../assets/php3.jpg'
-import java  from '../../assets/java.png'
-import Bach  from '../../assets/bach.png'
+
 import Nav from '../nav/Nav'
 import Main from '../Main/Main'
 const HeroText = () => {
@@ -37,7 +31,7 @@ const HeroText = () => {
 </div>  */}
 
 
-            <Nav />
+      
             <Main />        
         
     </>

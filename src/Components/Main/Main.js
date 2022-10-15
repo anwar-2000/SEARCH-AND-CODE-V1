@@ -2,6 +2,12 @@ import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import styled from 'styled-components'
 import codingGif from '../../assets/coding.gif' 
+import Php from '../../assets/php-1.svg'
+import Assembly from '../../assets/assembly.svg'
+import Clanguage from '../../assets/c-1.svg'
+import CPlus from '../../assets/c.svg'
+import Java from '../../assets/java.svg'
+import python from '../../assets/python-3.svg'
 
 const Main = () => {
         const Left = styled.div`
@@ -31,8 +37,26 @@ const Main = () => {
                     font-size: 0.7rem;
                     margin-left:3rem;
         `
+        const Container = styled.div`
+              display: flex;
+              flex-direction: column;
+        `
+        const Images=styled.div`
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.5rem;
+            background-color: white;
+            padding-right: 3rem;
+            padding-bottom: 3rem;
+
+            img{
+              width:5%;
+            }
+        `
     
-  return <>
+  return <> 
+          <Container>
     <section className='bg-white flex justify-evenly items-center'>
                     <Left>
                     <div>
@@ -71,6 +95,15 @@ const Main = () => {
                             <img src={codingGif} alt='coding image' />
                     </Right>
     </section>
+            <Images>
+                      <img src={Clanguage}  alt="C"/>
+                      <img src={Java}  alt="C"/>
+                      <img src={Assembly}  alt="C"/>
+                      <img src={Php}  alt="C"/>
+                      <img src={python}  alt="C"/>
+                      <img src={CPlus}  alt="C"/>
+            </Images>
+    </Container>
  
 
 
