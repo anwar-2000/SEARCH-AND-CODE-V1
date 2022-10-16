@@ -115,7 +115,7 @@ const Main = () => {
                     </Left>
 
                     <Right>     
-                            <img src={codingGif} alt='coding image' data-aos="fade-in" data-aos-duration="2000" />
+                            <img src={codingGif} alt="" data-aos="fade-in" data-aos-duration="2000" />
                     </Right>
     </section>
             <Images>
