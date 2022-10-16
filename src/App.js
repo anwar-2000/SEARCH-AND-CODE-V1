@@ -9,6 +9,8 @@ import GoogleImage from './assets/google-1-1.svg'
 import YoutubeSearch from './assets/YoutubeLogo.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import FORMOBILEGIF from './assets/coding2.gif'
+
 
 import AOS from 'aos';
 
@@ -78,7 +80,7 @@ function App() {
   <div className='herotext'>
       <HeroText />
   </div>
-      <div className='flex justify-center items-center gap-x-4 py-10'>
+      <div className='flex justify-center items-center gap-x-4 py-10' id="swipercontainer">
                   <img src={GoogleImage} alt="google search" className='w-1/5' onClick={changetoGoogle} data-aos="flip-up"/>
                   <h3 className='text-white'> OR : </h3> 
                   <img src={YoutubeSearch} alt='Youtube search' className='w-1/5' onClick={changetoYoutube} data-aos="flip-up"/>
@@ -125,7 +127,10 @@ function App() {
       </Swiper>
       {// ******************************************
       }
-     
+                  <div className='Mobile'>
+                              <img alt='' src={FORMOBILEGIF} />
+                              <h1 className='text-center text-white mt-5'>ONLY PC FOR NOW ...</h1>
+                  </div>
   </>
 }
 

@@ -12,7 +12,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
 }
-
+.Mobile{
+  display: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -20,4 +22,35 @@ code {
 
 .editor{
   background-color: white !important;
+}
+
+@media (max-width: 480px) {
+  .herotext {
+      display: none;
+  }
+  #swipercontainer{
+    display: none;
+  }
+  .mySwiper{
+    display: none;
+  }
+  .Mobile{
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .herotext {
+      display: none;
+  }
+  #swipercontainer{
+    display: none;
+  }
+  .mySwiper{
+    display: none;
+  }
+  .Mobile{
+    display: block;
+  }
 }
