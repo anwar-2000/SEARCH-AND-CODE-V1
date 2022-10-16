@@ -1,0 +1,49 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background : rgba(0, 0 , 0, 0.75);
+}
+
+.modal{
+    position: fixed;
+    top: 4vh;
+    width: 50%;
+    left: 25%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #B0D0EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+}
+
+.modal button {
+            border: solid white 2px;
+            padding: 1rem 3rem;
+            margin-bottom: 0.5rem;
+            font-size: large;
+            transition: ease-in 400ms;
+            border-radius: 5px;
+}
+
+.modal button:hover {
+            background-color: white;
+            color: B0D0EC ;
+}
+
+.modal ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal ul li {
+            margin: 0.5rem 0 ;
+}

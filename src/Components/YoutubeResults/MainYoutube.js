@@ -9,6 +9,8 @@ const MainYoutube = () => {
 
 
     const onSearch = async (title) =>{
+          if(title ==='' || title === undefined){return ;}
+          
             const response = await YoutubeApi.get("/search",{
                 params:{
                     q:title 

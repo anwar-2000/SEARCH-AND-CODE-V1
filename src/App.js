@@ -9,6 +9,11 @@ import GoogleImage from './assets/google-1-1.svg'
 import YoutubeSearch from './assets/YoutubeLogo.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
+import AOS from 'aos';
+
+import 'aos/dist/aos.css';
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,7 +46,12 @@ const EditorWrapper = styled.div`
 
 function App() {
 
+      useEffect(() => {
+            AOS.init();
+          }, [])
+
       const [showGoogle , setShowGoogle]=useState(false);
+      const [Language , setLanguage]=useState('');
 
       const changetoGoogle = () =>{
             setShowGoogle(true);
@@ -53,12 +63,15 @@ function App() {
       const language2 = useRef('java');
 
       useEffect(()=>{
-            
+            setLanguage(language2.current.value);
       },[language2.current.value]);
 
  const  selectChangeHandler= (event) =>{
+      setLanguage(prevState =>{
+                  return prevState = event.target.value;
+      });
           language2.current.value = event.target.value ;
-          console.log(language2.current.value);
+          console.log(language2.current.value , Language);
   }
 
   return  <>
@@ -66,15 +79,15 @@ function App() {
       <HeroText />
   </div>
       <div className='flex justify-center items-center gap-x-4 py-10'>
-                  <img src={GoogleImage} alt="google search" className='w-1/5' onClick={changetoGoogle}/>
+                  <img src={GoogleImage} alt="google search" className='w-1/5' onClick={changetoGoogle} data-aos="flip-up"/>
                   <h3 className='text-white'> OR : </h3> 
-                  <img src={YoutubeSearch} alt='Youtube search' className='w-1/5' onClick={changetoYoutube}/>
+                  <img src={YoutubeSearch} alt='Youtube search' className='w-1/5' onClick={changetoYoutube} data-aos="flip-up"/>
       </div>
       {//****************************the main section formed like a slider
        }
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-                                 {showGoogle &&   <Results />}
+                                 {showGoogle &&   <Results  />}
 
                                   {!showGoogle &&  <MainYoutube />}
         </SwiperSlide>
@@ -94,11 +107,15 @@ function App() {
               <option value="matlab/octav">MATLAB - OCTAV</option>
               <option value="assembly">ASSEMBLY .-. </option>
               <option value="php">PHP</option>
+              <option value="swift">SWIFT</option>
+              <option value="bash">BASH</option>
+              <option value="kotlin">KOTLIN</option>
+              <option value="html/css">HTML / CSS /JS</option>
                       </select>
               </SelectWrapper>
             
                <EditorWrapper>
-                          <CodeEditor language='python3'/>
+                          <CodeEditor language={Language}/>
               </EditorWrapper>
     
              

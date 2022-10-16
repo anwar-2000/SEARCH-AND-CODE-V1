@@ -6,7 +6,7 @@ import GIF from "../../assets/cat-computer.gif";
 
 const Results = () => {
   const [urls, setUrls] = useState([]);
-  const [enteredSearch, setEnteredSearch] = useState();
+  const [enteredSearch, setEnteredSearch] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -16,6 +16,9 @@ const Results = () => {
 
   //fetching function
   const fetchingGoogleSearch = useCallback(async () => {
+          if(enteredSearch === ''){
+              return ;
+          }
     setError(null); // ensure that error is null
     setIsLoading(true); //for a loader
     try {
@@ -57,7 +60,7 @@ const Results = () => {
 
   return (
     <div className={classes.container}>
-        <div className={classes.search__input}>
+        <div className={classes.search__input} data-aos="fade-up" data-aos-duration="2000">
             <label htmlFor="search-google"> HAPPY HACKING !  </label>
              <input id="search-google"
           onChange={inputChangeHandler}
