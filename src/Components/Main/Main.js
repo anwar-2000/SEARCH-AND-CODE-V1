@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Modal from '../UI/Modal'
 import { Typewriter } from 'react-simple-typewriter'
 import styled from 'styled-components'
-import codingGif from '../../assets/coding.gif' 
+import coding3d from '../../assets/coding3d.mp4' 
+import clickMe from '../../assets/clickMe2.gif' 
 import Php from '../../assets/php-1.svg'
 import Assembly from '../../assets/assembly.svg'
 import Clanguage from '../../assets/c-1.svg'
@@ -33,44 +34,77 @@ const Main = () => {
 
         const Left = styled.div`
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items : center;
+                flex-direction: column ;
+                justify-content: space-around !important;
+               
                 flex: 1;
+                width: 100%;
+                
+
+                .ThisIsNav ul {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      gap: 80px;
+                      transform: translate(50px,-115px);
+                      font-family: 'Poor Story', cursive;
+                }
+                .ThisIsNav ul li:first-child() {
+                      flex: 1;
+                }
+
+                button{
+                  transform: translate(95%,20px);
+                }
+                img{
+                    border-radius: 50% 50%;
+                    width: 15%;
+                 //  transform: translateX(40%);
+                  }
+              label{
+                transform: translate(80%,20px);
+                z-index: 15;
+              }
         h1{
             font-size: 60px;
-           ;
+            font-family: 'Poor Story', cursive;
         }
 
         h2{
             font-size: 25px;
             padding-bottom: 1.5rem;
             margin: 0 5rem;
-            
+            font-family: 'Poor Story', cursive;
         }
 
         `
         const Right = styled.div`
-               
+            overflow: hidden;
+                video {
+                      margin: 2.5rem;
+                      border-radius: 15px;
+                      border-top-left-radius: 60% !important;
+                      transform: translateX(5rem);
+                      filter: drop-shadow(-7mm 2mm 4mm #C2A4D8);
+                }
         `
         const Paragraph = styled.div`
                     font-style: italic;
-                    font-size: 0.7rem;
-                    margin-left:3rem;
+                    font-size: 0.9rem;
+                    margin-left:5rem;
+
+                 
         `
         const Container = styled.div`
               display: flex;
-              flex-direction: column;
+              flex-direction: column !important;
         `
         const Images=styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 2.5rem;
-            background-color: white;
-            transform: translateY(-50%);
-            padding-bottom: 3rem;
-
+            transform: translateY(-70%);
             img{
               width:5%;
             }
@@ -79,15 +113,21 @@ const Main = () => {
   return <> 
              { showModal &&  <Modal  onClose = {CloseModalHandler}/>}
           <Container>
-    <section className='bg-white flex justify-evenly items-center'>
-                    <Left>
-                    <div>
-                    <h2 >
-                    YOU  {' '}
+    <section className='bg-gradient-to-b from-violet-300 to-fuchsia-200 flex justify-evenly items-center backdrop-blur-xl '>
+            <Left>
+                    <div className='ThisIsNav'>
+                            <ul>
+                                <li>Search2Code</li>
+                              
+                            </ul>
+                    </div>
+                    <div className='willbeNav'>
+                    <h2>
+                    YOU ARE LOOKING FOR BETTER LEARNING METHOD !  {' '}
                     <span style={{ color: 'green', fontWeight: 'bold' }}>
                       {/* Style will be inherited from the parent element */}
                       <Typewriter
-                        words={[' ARE LOOKING FOR BETTER LEARNING METHOD ! ', 'HAVE US !!','CAN CODE AND SEARCH FOR WHATEVER YOU WANT' , ' CAN DO IT VIA OUR PLATFORM']}
+                        words={['YOU', 'HAVE US !!']}
                         loop={6}
                         cursor
                         cursorStyle='_'
@@ -110,15 +150,18 @@ const Main = () => {
                                         or via  the custom google search <span style={{color:'green'}}>(SOME WEBSITES BLOCK THE IFRAME , SORRY !)</span> 
                                         </p>
                             </Paragraph>
-                            <button className='bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white my-5 py-2 px-4 border border-green-500 hover:border-transparent rounded ' 
-                            onClick={ShowModalHandler}>HOW DOES IT WORK ?</button>
+                            <label htmlFor='clickme'> TUTORIAL HERE : </label>
+                            <button  
+                            onClick={ShowModalHandler}>
+                            <img id='clickme' src={clickMe} alt=''/>
+                           </button>
                     </Left>
 
                     <Right>     
-                            <img src={codingGif} alt="" data-aos="fade-in" data-aos-duration="2000" />
+                           <video style={{width: '90%', height: '100%'}} autoPlay muted loop src={coding3d} type="video/mp4" />      
                     </Right>
     </section>
-            <Images>
+            <Images data-aos="fade-in" data-aos-duration="3000">
                       <img src={Clanguage}  alt="C" data-aos="flip-left" />
                       <img src={Java}  alt="C" data-aos="flip-left"/>
                       <img src={Assembly}  alt="C" data-aos="flip-left"/>
@@ -131,7 +174,7 @@ const Main = () => {
                       <img src={css}  alt="C" data-aos="flip-left"/>
                       <img src={javascript}  alt="C" data-aos="flip-left"/>
                       <img src={bash}  alt="C" data-aos="flip-left"/>
-            </Images>
+          </Images> 
     </Container>
  
 

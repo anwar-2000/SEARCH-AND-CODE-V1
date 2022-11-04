@@ -1,5 +1,18 @@
 .aboutme {
         display: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 12;
+        margin-right: 3rem;
+        margin-top: 0.5rem;
+        gap: 1.5rem;
+}
+
+svg{
+        fill: white;
+        height: 1.5rem;
+        width: 1.5rem;
 }
 
 

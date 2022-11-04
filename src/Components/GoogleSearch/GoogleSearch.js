@@ -9,7 +9,7 @@ const GoogleSearch = () => {
               setSearchThis(event.target.value)
       }
 
-      const isEmpty = searchThis === '' ; 
+    const isEmpty = searchThis === '' ; 
     let value ;
     const passValueHandler = (event) =>{
       value = searchThis ;

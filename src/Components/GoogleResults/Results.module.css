@@ -5,6 +5,15 @@
     color: white;
 
 }
+
+.container img {
+    margin-top: 1.5rem;
+}
+
+.container ul {
+    margin: 0px 1.5rem;
+}
+
 .container  h3{
    color: #D94952;
 
@@ -13,6 +22,7 @@
 .search__input {
     display: flex; 
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 .search__input  input{
     font-weight: bold;

@@ -38,6 +38,18 @@ const SelectWrapper = styled.div`
       align-items: center;
       justify-content: center;
       margin: 2rem 0 ;
+
+      label{
+            font-family: sans-serif;
+      }
+
+      select {
+            color: white;
+            background: none;
+            border: solid 1px white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 15px;
+      }
 `
 const EditorWrapper = styled.div`
       display: flex;

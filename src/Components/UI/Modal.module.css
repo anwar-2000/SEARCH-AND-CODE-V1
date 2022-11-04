@@ -24,12 +24,14 @@
 }
 
 .modal button {
-            border: solid white 2px;
-            padding: 1rem 3rem;
+            border: solid black 2px;
+            padding: 0.5rem 3rem;
+            margin-top: 1.5rem;
             margin-bottom: 0.5rem;
             font-size: large;
             transition: ease-in 400ms;
             border-radius: 5px;
+            color: black;
 }
 
 .modal button:hover {
@@ -37,13 +39,7 @@
             color: B0D0EC ;
 }
 
-.modal ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.modal ul li {
-            margin: 0.5rem 0 ;
+.modal video {
+   transform: translateX(30px);
 }
